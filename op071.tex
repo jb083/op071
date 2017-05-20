@@ -1,0 +1,85 @@
+\documentclass[lualatex,a4paper]{bxjsarticle}
+\usepackage{amsmath,amssymb,mathrsfs,braket}
+% \usepackage{amsthm,amscd} %定理環境, 可換図式
+% \usepackage{ascmac} %screen, itembox環境
+\usepackage{graphicx,xcolor}
+% \usepackage{fancyhdr,lastpage} %ヘッダー/フッター操作
+\usepackage{makeidx} %索引
+\usepackage{hyperref} %ハイパーリンク
+% \hypersetup{colorlinks=true,linkcolor=blue,citecolor=green}
+
+% 和文フォント
+% \usepackage[no-math,ipaex]{luatexja-preset} % IPAexフォント
+\usepackage[no-math]{luatexja-fontspec} %Source Han フォント
+	\setmainjfont{SourceHanSerifJP}
+	\setsansjfont{SourceHanSansJP}
+\ltjsetparameter{jacharrange={-2}} % 非ASCII文字がすべて和文と解釈されるのを防ぐ
+
+% 欧文フォント
+\setmainfont[Ligatures=TeX]{SourceSerifPro}
+% \setmainfont[Ligatures=TeX]{XITS}
+\setsansfont[Ligatures=TeX]{SourceSansPro}
+% \setmonofont[Ligatures=TeX]{Inconsolatazi4}
+\setmonofont[Ligatures=TeX]{SourceCodePro}
+
+% 数式フォント
+\usepackage{unicode-math}
+\unimathsetup{math-style=ISO,bold-style=ISO}
+\setmathfont{LatinModernMath}
+
+% 索引を作成
+\makeindex
+
+% jsbook用の設定
+\setlength{\textwidth}{\fullwidth} %本文領域を最大化 (余白を小さくする)
+\setlength{\evensidemargin}{\oddsidemargin}
+
+% MusiXTeX用設定
+\usepackage{musixtex}
+\input{musixadd.tex}
+\nobarnumbers %小節番号なし
+\smallmusicsize %楽譜のサイズを小さく
+\newcounter{mycounter} % カウンタの宣言
+\setcounter{mycounter}{0} % カウンタの初期化
+\newcommand{\useMycounter}[1][]{\refstepcounter{mycounter}{#1}譜例{\themycounter}: }
+\newcommand{\musicbegin}{\vspace*{5truemm}\begin{music}}
+\newcommand{\musicend}[2]{\end{music}\nopagebreak\begin{center}{\small\useMycounter[\label{#1}]{#2}}\end{center}}
+
+% 小節番号表示用
+\newcommand{\shosetu}[1]{
+\startbarno=#1
+\systemnumbers
+\def\writebarno{\llap{\the\barno\barnoadd}}%
+\def\raisebarno{2\internote}%
+\def\shiftbarno{1.3\Interligne}%
+}
+
+% 構造番号
+\newcommand{\ind}[2]{$\text{#1}_{\text{#2}}$}
+
+% 文書データ
+\title{ブラームス: 5つの歌曲 作品71}
+\author{H.~S.}
+\date{2017.05.20-}
+
+\begin{document}
+
+\maketitle
+
+\tableofcontents
+
+\input{./tex/071-overview.tex}
+
+\input{./tex/071-1.tex}
+
+\input{./tex/071-2.tex}
+
+\input{./tex/071-3.tex}
+
+\input{./tex/071-4.tex}
+
+\input{./tex/071-5.tex}
+
+\printindex
+
+\end{document}
