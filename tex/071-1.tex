@@ -1,6 +1,7 @@
 
 \section{春は優しい恋の季節 (Es liebt sich so lieblich im Lenze)}
 
+\vspace*{5truemm}
 \begin{center}
 	{\large Es liebt sich so lieblich im Lenze}\\
 	\hspace*{25truemm}Heinrich Heine (1797--1856)
@@ -47,10 +48,10 @@
 	春には愛はひときわ愛らしいのです！ \\
 	% Die Sch{\"a}ferin seufzt aus tiefer Brust: \\
 	% seufzen [自] ため息をつく; aus [前] の中から; tief [形] 深い; Brust [女] 胸
-	その女の子が胸の奥深くからため息をつきます \\
+	その女の子が胸の奥からため息をつきます \\
 	% "Wem geb' ich meine Kr{\"a}nze?" \\
 	% wem [代] 誰に; geben [他] を与える
-	「誰に私の花輪を差し上げましょう?」\\
+	「誰に私の花輪を差し上げましょうか？」\\
 
 	% Ein Reiter reitet den Flu\ss entlang, \\
 	% Reiter [男] 騎兵; reiten [自] (馬に) 乗る; entlang [後置詞] に沿って
@@ -75,25 +76,95 @@
 	% von [前] から
 	小夜啼鳥は愛と接吻について歌います \\
 	% es liebt sich so lieblich im Lenze!
-	春には愛はひときわ愛らしいのです！ 
+	春には愛はひときわ愛らしいのです！
 \end{multicols}
 \end{quote}
 
+\vspace*{5truemm}
+
+Heinrich Heineの詩による可愛らしい歌曲である.
+本作のテクストの出典は「新詩集」 (Neue Gedichte, 1844年) の"Romanzen"節に含まれる23の詩のうち第13番「春」
+(Frühling) である\footnote{Charles Stanfordもこの詩に付曲している (作品4-4).}\cite{liedernet}.
+この詩自体の作詞は1839年とされている.
+なお, BrahmsはHeineの詩にわずか6曲しか付曲していない:
+他の歌曲はいずれもこの作品より後期のもので, 作品85-1, 作品85-2, 作品96-1, 作品96-3, 作品96-4である.
+
+有節歌曲形式を下敷きにしているが, 第3句および第4句は自由に変奏されている.
+特に第3句では嬰ヘ長調へと移り, 馬の蹄のリズムが三連符で表現される.
+それ以外は概してピアノパートは流れるような音型が続き, 留まることのない川の流れや煌きを思わせる.
+対する歌唱は民謡風で, シンプルかつ歯切れが良い.
+また, カデンツを除いて属和音が回避される傾向にあり, 春の穏やかな陽気を醸し出している.
+
+原調はニ長調, 4分の4拍子であるが, ピアノの序奏が強拍を避けて開始する上に歌唱もアウフタクトで始まるため, やや拍子が取りにくい (譜例\ref{1-1}).
+
 \musicbegin
-	\shosetu{10}
-	\def\nbinstruments{1}%   % パート数
-	\setstaffs{1}{1}%        % 下から1番目は2段
-	\setclef{1}{0000}%       % 下から1番目はへ音記号
+	\def\nbinstruments{2}%   % パート数
+	\setstaffs{1}{2}%        % 下から1番目は2段
+	\setclef{1}{6000}%       % 下から1番目はへ音記号
 	\generalsignature{+2}%    % 調号は正の値のときシャープの数
-	% \generalmeter{\meterfrac{2}{4}}%  % 拍子
+	\generalmeter{\meterC}%  % 拍子
 	\startextract%
-	\Notes\ibu{0}{f}{+3}\islurd{1}{f}\qb{0}{f}\tbu{0}\tslur{1}{h}\qb{0}{h}\sh{g}\cu{g}\cl{i}\enotes
-	\NOtes\ql{l}\enotes
-	\Notes\cl{k}\cu{i}\enotes
+	\nnnotes\cl{*}\enotes
+	\setclef{1}{0}\zchangeclefs
+	\notesp
+		\zmidstaff{\p \ {\small dolce}}%
+		\ds\ibu{0}{h}{-2}\islurd{1}{i}\qb{0}{ih}\tbu{0}\qb{0}{f}\ibu{0}{d}{-1}\qb{0}{ded}\tbu{0}\tslur{1}{b}\qb{0}{b}|%
+		\ds\ibl{0}{'h}{-2}\isluru{2}{i}\qb{0}{ih}\tbl{0}\qb{0}{f}\ibl{0}{d}{-1}\qb{0}{ded}\tbl{0}\qb{0}{b}&%
+		\zcharnote{s}{\hspace*{-8truemm}Anmutig bewegt}%
+	\enotes
+	\nnnotes\cl{*}\enotes
+	\def\atnextbar{\znotes&\centerbar{\cpause}\en}%
+	\setclef{1}{6}\zchangeclefs
 	\bar
-	\NOtes\hu{h*}\qu{d}\qp\enotes
+	\notesp
+		\ibl{0}{a}{-1}\isluru{1}{a}\qb{0}{aba}\tbl{0}\qb{0}{M}\ibu{0}{K}{-1}\qb{0}{KLK}\tbu{0}\tbsluru{1}{b}\qb{0}{G}|%
+		\ibl{0}{'c}{+1}\curve 116\tslur{2}{a}\qb{0}{a}\isluru{2}{i}\qb{0}{ih}\tbl{0}\qb{0}{f}\ibl{0}{d}{-1}\qb{0}{ded}\tbl{0}\qb{0}{b}&%
+		\cu{*}\hpause\cu{**}\qp\cu{*}\zcharnote{M}{\scriptsize Die}\qu{d*}
+	\enotes
+	\bar
+	\notesp
+		\ibu{0}{K}{0}\ibsluru{1}{K}\qb{0}{KDM}\tbu{0}\qb{0}{K}\ibl{0}{K}{0}\qb{0}{NKb}\tbl{0}\qb{0}{K}|%
+		\ibl{0}{'c}{+1}\curve 116\tslur{2}{a}\qb{0}{a}\ibslurd{2}{N}\qb{0}{ih}\tbl{0}\qb{0}{f}\ibl{0}{d}{-1}\qb{0}{ded}\tbl{0}\qb{0}{b}&%
+		\zcharnote{N}{\scriptsize wel--}\qu{f*}\zcharnote{N}{\scriptsize len}\qu{h*}
+			\zcharnote{N}{\scriptsize blin--}\ql{i*}\ccharnote{N}{\scriptsize ken}\cl{k}\zcharnote{N}{\scriptsize und}\cl{k}
+	\enotes
+	\bar
+	\notesp
+		\ibl{0}{L}{-1}\qb{0}{dKN}\tbl{0}\qb{0}{K}\ibl{0}{L}{-1}\qb{0}{dKM}\tbl{0}\curve 111\tbsluru{1}{H}\qb{0}{K}|%
+		\ibu{0}{h}{-1}\qb{0}{hji}\tbu{0}\qb{0}{g}\ibu{0}{g}{0}\qb{0}{fih}\tbu{0}\curve 233\tsslur{2}{f}\qb{0}{f}&%
+		\zcharnote{N}{\scriptsize flie--}\ql{m*}\ccharnote{N}{\scriptsize {\ss}en}\cl{k}
+			\zcharnote{N}{\scriptsize da-}\cl{i}\zcharnote{N}{\scriptsize hin}\qu{h*}\zcharnote{N}{\scriptsize es}\ql{k*}
+	\enotes
 	\endextract
-\musicend{1-10}{第10小節から}
+\musicend{1-1}{作品71-1冒頭}
+
+既に指摘したように, 本作はBrahmsが交響曲第2番で引用している点が特筆される.
+その第1楽章第502小節からのフルートの旋律 (譜例\ref{sym2}) は, (基本動機D-Cis-Dから導き出されているとはいえ)
+作品71-1の第10小節の動き (譜例\ref{1-10}) とまったく同じである.
+Brahmsは自身の手元の交響曲の出版譜にその事実を書き込んでいる.
+
+\musicbegin
+\shosetu{10}
+\def\nbinstruments{1}%   % パート数
+\setstaffs{1}{1}%        % 下から1番目は2段
+\setclef{1}{0000}%       % 下から1番目はへ音記号
+\generalsignature{+2}%    % 調号は正の値のときシャープの数
+% \generalmeter{\meterfrac{2}{4}}%  % 拍子
+\startextract%
+\Notes\ibu{0}{f}{+3}\islurd{1}{f}\qb{0}{f}\tbu{0}\tslur{1}{h}\qb{0}{h}\sh{g}\cu{g}\cl{i}\enotes
+\NOtes\ql{l}\enotes
+\Notes\cl{k}\cu{i}\enotes
+\bar
+\NOtes\hu{h*}\qu{d}\qp\enotes
+\endextract
+\musicend{1-10}{作品71-1第10小節から}
+
+実際, 本歌曲「春は優しい恋の季節」の描写する空気感は問題の交響曲を満たしているものでもある (やや前者の方が軽いか).
+これはBrahmsが交響曲第2番を作曲するにあたって南オーストリアのPörtschachを避暑地に選んでおり,
+当地の森や湖の美しさに影響されたからと解釈されている.
+BrahmsはBillrothへの手紙の中で「湖上にて」作品59-1の一節を引用してPörtschachを称えている.
+他にも, 第1楽章第2主題が有名な「子守歌」作品49-4とよく似た節回しである等,
+交響曲第2番とBrahmsの歌曲との関係性は特に顕著なものとなっている.
 
 \musicbegin
 	\shosetu{502}
@@ -111,4 +182,4 @@
 	\bar
 	\NOtes\ql{k}\qp\enotes
 	\zendextract
-\musicend{1-10}{交響曲第2番第1楽章第502小節から}
+\musicend{sym2}{交響曲第2番第1楽章第502小節からのFl}
